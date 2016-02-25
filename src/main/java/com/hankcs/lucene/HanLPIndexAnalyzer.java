@@ -4,6 +4,7 @@ import com.hankcs.hanlp.HanLP;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.Tokenizer;
 
+import java.io.Reader;
 import java.util.Set;
 
 public class HanLPIndexAnalyzer extends Analyzer
@@ -35,9 +36,9 @@ public class HanLPIndexAnalyzer extends Analyzer
     }
 
     @Override
-    protected TokenStreamComponents createComponents(String fieldName)
+    protected TokenStreamComponents createComponents(String fieldName, Reader input)
     {
-        Tokenizer tokenizer = new HanLPTokenizer(HanLP.newSegment().enableIndexMode(true), filter, pstemming);
+        Tokenizer tokenizer = new HanLPTokenizer(input, HanLP.newSegment().enableIndexMode(true), filter, pstemming);
         return new TokenStreamComponents(tokenizer);
     }
 }

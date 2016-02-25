@@ -5,6 +5,7 @@ import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.util.TokenizerFactory;
 import org.apache.lucene.util.AttributeFactory;
 
+import java.io.Reader;
 import java.util.Map;
 
 public class HanLPTokenizerFactory extends TokenizerFactory
@@ -20,8 +21,8 @@ public class HanLPTokenizerFactory extends TokenizerFactory
     }
 
     @Override
-    public Tokenizer create(AttributeFactory factory)
+    public Tokenizer create(AttributeFactory factory, Reader input)
     {
-        return new HanLPTokenizer(HanLP.newSegment().enableOffset(true).enableIndexMode(enableIndexMode), null, enablePorterStemming);
+        return new HanLPTokenizer(input, HanLP.newSegment().enableOffset(true).enableIndexMode(enableIndexMode), null, enablePorterStemming);
     }
 }

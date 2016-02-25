@@ -12,6 +12,7 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.Set;
 
 /**
@@ -39,9 +40,9 @@ public class HanLPTokenizer extends Tokenizer
      * @param filter 停用词
      * @param enablePorterStemming 英文原型转换
      */
-    public HanLPTokenizer(Segment segment, Set<String> filter, boolean enablePorterStemming)
+    public HanLPTokenizer(Reader input, Segment segment, Set<String> filter, boolean enablePorterStemming)
     {
-        super();
+        super(input);
         this.segment = new SegmentWrapper(new BufferedReader(input), segment);
         this.filter = filter;
         this.enablePorterStemming = enablePorterStemming;

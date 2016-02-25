@@ -15,8 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <hanlp.version>portable-1.2.4</hanlp.version>
-        <lucene.version>5.1.0</lucene.version>
-
+        <lucene.version>4.10.3</lucene.version>
         <javac.src.version>1.7</javac.src.version>
         <javac.target.version>1.7</javac.target.version>
         <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
