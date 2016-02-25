@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hankcs.nlp</groupId>
-    <artifactId>hanlp-solr-plugin</artifactId>
+    <artifactId>hanlp-solr-plugin-solr4</artifactId>
     <version>1.0.3</version>
 
-    <name>hanlp-solr-plugin</name>
+    <name>hanlp-solr-plugin-solr4</name>
     <url>https://github.com/hankcs/HanLP</url>
 
     <properties>

@@ -2,16 +2,11 @@ hanlp-solr-plugin
 ========
 
 
-## 源作者地址：
+## 源作者github地址：
 
 https://github.com/hankcs/hanlp-solr-plugin
 
-这个 fork 进行了降级处理，调整到支持 Solr 4.10.3，因为目前最新版 CDH 5.5.1 集成 Solr 版本为 4.10.3
-
-
-
-
-
+fork 进行了降级处理，调整支持Solr 4.10.3，这是当前最新版CDH 5.5.1集成Solr版本。
 
 
 HanLP中文分词solr插件
